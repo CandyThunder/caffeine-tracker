@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Caffeine Tracker</title>
+
+    <!-- Include Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- (Optional) Include Moment.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h1>Caffeine Tracker</h1>
+        <form id="caffeine-form">
+          <label for="preset-drink">Choose Drink:</label>
+          <select id="preset-drink">
+          </select>
+          <label for="time">Time:</label>
+          <input type="datetime-local" id="time" required />
+          <button type="submit">Add Drink</button>
+        </form>
+        <ul id="drink-list"></ul>
+      </div>
+      <div class="graph-container">
+        <canvas id="caffeine-graph"></canvas>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

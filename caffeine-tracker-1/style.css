@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.form-container {
+  flex: 1;
+  width: 100%;
+  max-width: 70%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addDrinkBtn {
+    margin-bottom: 24px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.graph-container {
+  flex: 2;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Allow the container to grow based on its parent size */
+  min-height: 400px; /* Minimum height to ensure it's not too small */
+}
+
+/* Ensure the canvas resizes to fit the container */
+#caffeine-graph {
+  width: 100%;   /* Ensure the canvas fills the width of its container */
+  height: 100%;  /* Ensure the canvas fills the height of its container */
+  max-height: 500px;  /* Optional: Limit max height for large screens */
+}
+
+/* Ensure the container itself is responsive */
+.graph-container {
+  flex: 2;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;  /* Allow it to grow based on parent size */
+  max-width: 70%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .graph-container {
+    margin-top: 20px;
+    height: 400px;  /* Optional fixed height for mobile */
+  }
+}
+

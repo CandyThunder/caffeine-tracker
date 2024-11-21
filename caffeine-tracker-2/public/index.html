@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caffeine Tracker 2.0</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Caffeine Tracker 2.0</h1>
+
+    <div class="container">
+      <form id="caffeine-form">
+        <label for="drink">Drink:</label>
+        <select id="preset-drink">
+          <option value="63">Espresso (63mg)</option>
+          <option value="75">Latte (75mg)</option>
+          <option value="95">Black Coffee (95mg)</option>
+          <option value="30">Green Tea (30mg)</option>
+          <option value="80">Energy Drink (80mg)</option>
+        </select>
+        <label for="time">Time:</label>
+        <input type="datetime-local" id="time" required />
+        <button type="submit" class="submit-btn">Add Drink</button>
+      </form>
+
+      <!-- Button to manage drinks -->
+      <button class="manage-btn" id="manage-btn">Manage Drinks</button>
+
+      <div id="message"></div>
+      <!-- Message area for feedback -->
+
+      <div class="graph-container">
+        <canvas id="caffeine-graph"></canvas>
+      </div>
+    </div>
+
+    <!-- Popup Modal for Manage Drinks -->
+    <div id="popup-modal" class="modal">
+      <div class="modal-content">
+        <h2>Manage Drinks</h2>
+        <!-- The drinks list is now populated dynamically in the modal -->
+        <div id="drinks-list-modal"></div>
+        <button class="close-btn" id="close-modal">Close</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+    <script src="graph.js"></script>
+    <script src="drinks.js"></script>
+  </body>
+</html>
+  
